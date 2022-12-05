@@ -1,0 +1,113 @@
+/* Basic Styles */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  height: 90vh;
+  justify-content: center;
+}
+
+/* Typography */
+h1 {
+  color: tomato;
+  font-size: 3rem;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+#instruction {
+  color: #444;
+  font-size: 1.5rem;
+  font-weight: 500;
+  height: 2rem;
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+/* Structure Block */
+.box {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 40rem;
+}
+
+.hanger {
+  background-color: #444;
+  border-radius: 2rem;
+  height: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.hanger__holder {
+  align-items: center;
+  display: flex;
+  height: 1.5rem;
+  justify-content: center;
+  width: 5rem;
+}
+
+.hanger__dots {
+  background-color: tomato;
+  border-radius: 50%;
+  height: 0.75rem;
+  position: relative;
+  width: 0.75rem;
+}
+
+.hanger__dots::before {
+  background-color: transparent;
+  content: "";
+  height: 5rem;
+  left: -12.5%;
+  outline: 0.2rem solid #444;
+  position: absolute;
+  top: 50%;
+  width: 1rem;
+  z-index: -3;
+}
+
+.card {
+  animation: shaky infinite 0.5s alternate ease-in-out;
+  background-color: rebeccapurple;
+  border: 3px solid #dde6e8;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.8rem;
+  height: 5rem;
+  text-align: center;
+  width: 5rem;
+}
+
+@keyframes shaky {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+.name {
+  background-color: #444;
+  border-radius: 0.9rem;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem;
+  text-align: center;
+  width: 5rem;
+}
+
+#canvas {
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
